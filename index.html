@@ -1,31 +1,107 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI HOT 每日晨报归档</title>
-<style>
-:root{--bg:#f6f7fb;--card:#fff;--ink:#1f2430;--muted:#6b7280;--brand:#4f46e5;--line:#e7e9f0;}
-*{box-sizing:border-box;} body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);}
-.hero{background:linear-gradient(135deg,#eef1ff,#eafff4);border-bottom:1px solid var(--line);padding:48px 20px;}
-.in{max-width:880px;margin:0 auto;}
-.k{display:inline-block;font-size:13px;font-weight:600;color:var(--brand);background:#eef1ff;border:1px solid #dfe3ff;padding:5px 12px;border-radius:999px;}
-h1{font-size:32px;margin:14px 0 6px;}
-.s{color:var(--muted);margin:0;}
-.s a{color:var(--brand);}
-.wrap{max-width:880px;margin:0 auto;padding:30px 20px;}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;}
-.mo{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;color:inherit;box-shadow:0 1px 2px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.06);transition:.15s;}
-.mo:hover{transform:translateY(-3px);border-color:#cfd3e6;}
-.mo .y{font-size:13px;color:var(--muted);}
-.mo .mm{font-size:22px;font-weight:800;}
-.mo .go{margin-top:6px;font-size:13px;font-weight:700;color:var(--brand);}
-</style></head>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI HOT 每日晨报</title><style>:root{--bg-primary:#f6f7fb;--bg-secondary:#fff;--text-primary:#1f2430;--text-secondary:#6b7280;--border:#e7e9f0;--brand:#4f46e5;--c0:#6366f1;--c1:#0ea5e9;--c2:#10b981;--c3:#f59e0b;--c4:#ec4899;--shadow:0 1px 2px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.06);--radius:16px}
+[data-theme=dark]{--bg-primary:#0f1117;--bg-secondary:#171a23;--text-primary:#e8eaf0;--text-secondary:#9aa3b2;--border:#262b38;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.4)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg-primary:#0f1117;--bg-secondary:#171a23;--text-primary:#e8eaf0;--text-secondary:#9aa3b2;--border:#262b38;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.4)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Segoe UI,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6;transition:background .3s,color .3s}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.topnav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(12px);background:color-mix(in srgb,var(--bg-primary) 82%,transparent);border-bottom:1px solid var(--border)}
+.topnav .row{max-width:1100px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:14px}
+.brand{font-weight:800;display:flex;align-items:center;gap:8px}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--c0),var(--c4))}
+.navlinks{margin-left:auto;display:flex;align-items:center;gap:6px}
+.navlinks a{padding:7px 12px;border-radius:10px;text-decoration:none;color:var(--text-secondary);font-size:14px;font-weight:600}
+.navlinks a:hover{background:var(--bg-secondary);color:var(--text-primary)}
+.theme-toggle{display:inline-flex;gap:2px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:999px;padding:3px}
+.theme-toggle button{padding:6px 9px;border:0;background:transparent;color:var(--text-secondary);border-radius:999px;cursor:pointer;font-size:13px;line-height:1}
+.theme-toggle button.active{background:var(--brand);color:#fff}
+.hero{padding:40px 0 22px}
+.kicker{display:inline-block;font-size:12px;font-weight:700;color:var(--brand);background:#eef1ff;border:1px solid #dfe3ff;padding:5px 12px;border-radius:999px}
+[data-theme=dark] .kicker{background:rgba(99,102,241,.18);border-color:transparent;color:#c7c9ff}
+.hero h1{font-size:clamp(28px,5vw,44px);margin:14px 0 6px;line-height:1.15}
+.hero .sub{color:var(--text-secondary);margin:0 0 18px;font-size:14px}
+.total{display:flex;align-items:baseline;gap:10px;margin:6px 0 22px}
+.total b{font-size:54px;font-weight:900;line-height:1;background:linear-gradient(135deg,var(--c0),var(--c1));-webkit-background-clip:text;background-clip:text;color:transparent}
+.total span{color:var(--text-secondary);font-size:15px}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.stat{background:var(--bg-secondary);border:1px solid var(--border);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+.stat .n{font-size:26px;font-weight:800}
+.stat .l{font-size:12.5px;color:var(--text-secondary);margin-top:2px}
+.stat.c0{border-top:3px solid var(--c0)} .stat.c0 .n{color:var(--c0)}
+.stat.c1{border-top:3px solid var(--c1)} .stat.c1 .n{color:var(--c1)}
+.stat.c2{border-top:3px solid var(--c2)} .stat.c2 .n{color:var(--c2)}
+.stat.c3{border-top:3px solid var(--c3)} .stat.c3 .n{color:var(--c3)}
+.stat.c4{border-top:3px solid var(--c4)} .stat.c4 .n{color:var(--c4)}
+.anchornav{position:sticky;top:57px;z-index:40;background:var(--bg-primary);border-bottom:1px solid var(--border);padding:10px 0}
+.anchornav .wrap{display:flex;gap:8px;flex-wrap:wrap}
+.anchornav a{padding:6px 12px;border-radius:999px;background:var(--bg-secondary);border:1px solid var(--border);text-decoration:none;color:var(--text-secondary);font-size:13px;font-weight:600}
+.anchornav a.active{color:#fff;background:var(--brand);border-color:var(--brand)}
+section.block{padding:30px 0 6px}
+section.block h2{font-size:22px;margin:0 0 16px;display:flex;align-items:center;gap:10px}
+section.block h2 .pill{font-size:12px;font-weight:700;color:#fff;background:var(--brand);border-radius:999px;padding:2px 9px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.card{position:relative;background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);transition:transform .15s,border-color .15s;display:flex;flex-direction:column;gap:10px}
+.card:hover{transform:translateY(-3px);border-color:#cfd3e6}
+[data-theme=dark] .card:hover{border-color:#3a4150}
+.card:focus-within{border-color:var(--brand)}
+.num{position:absolute;top:-11px;left:16px;width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+.card h3{font-size:16px;margin:6px 0 0;line-height:1.4}
+.chip{display:inline-block;font-size:12px;font-weight:600;color:var(--text-secondary);background:var(--bg-primary);border:1px solid var(--border);border-radius:999px;padding:3px 10px;align-self:flex-start}
+.card p{margin:0;font-size:14px;color:var(--text-secondary);line-height:1.6}
+.more{margin-top:auto;align-self:flex-start;font-size:13.5px;font-weight:700;color:var(--brand);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+.more:hover{text-decoration:underline}
+footer{border-top:1px solid var(--border);margin-top:36px;padding:26px 0 48px;color:var(--text-secondary);font-size:13px}
+footer a{color:var(--brand)}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}.anchornav{top:54px}}
+@media (max-width:520px){.navlinks a{padding:6px 9px}.hero .total b{font-size:44px}.brand .txt{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}.hero{min-height:auto;display:flex;flex-direction:column;align-items:flex-start}
+.cta{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--brand);color:#fff;font-weight:700;text-decoration:none;padding:13px 22px;border-radius:12px;box-shadow:var(--shadow);transition:transform .15s}
+.cta:hover{transform:translateY(-2px)}
+.archive{padding:30px 0 10px}
+.archive h2{font-size:22px;margin:0 0 14px}
+.search{width:100%;max-width:420px;padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:var(--bg-secondary);color:var(--text-primary);font-size:14px;margin-bottom:18px}
+.search:focus{outline:2px solid var(--brand);outline-offset:1px}
+.grid.days{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.day{display:flex;flex-direction:column;gap:4px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:14px;padding:16px;text-decoration:none;color:inherit;box-shadow:var(--shadow);transition:transform .15s,border-color .15s}
+.day:hover{transform:translateY(-3px);border-color:#cfd3e6}
+[data-theme=dark] .day:hover{border-color:#3a4150}
+.day .d{font-size:18px;font-weight:800}
+.day .w{font-size:13px;color:var(--text-secondary)}
+.day .go{margin-top:6px;font-size:13px;font-weight:700;color:var(--brand)}
+.empty{color:var(--text-secondary)}</style></head>
 <body>
-<header class="hero"><div class="in">
-<span class="k">AI HOT · 每日晨报归档</span>
-<h1>AI HOT 每日晨报</h1>
-<p class="s">每日自动抓取的 AI HOT 日报，单文件 HTML 仪表盘，按月份归档。<br>🌐 在线阅读：<a href="https://shaominfeng.github.io/ai-hot-daily/">https://shaominfeng.github.io/ai-hot-daily/</a></p>
+<header class="topnav"><div class="row">
+<div class="brand"><span class="dot"></span><span class="txt">AI HOT 晨报</span></div>
+<nav class="navlinks"><a href="__NAV_TODAY__">今日</a><a href="__NAV_ARCHIVE__">归档</a><div class="theme-toggle" role="radiogroup" aria-label="主题"><button data-theme="light" role="radio" aria-checked="false">亮</button><button data-theme="dark" role="radio" aria-checked="false">暗</button><button data-theme="system" role="radio" aria-checked="true">自动</button></div></nav>
 </div></header>
 <main class="wrap">
-<h2 style="font-size:18px;margin:0 0 16px;">月度索引</h2>
-<div class="grid"><a class="mo" href="2026-07/"><span class="y">2026</span><span class="mm">7 月</span><span class="go">查看 →</span></a></div>
-</main></body></html>
+<section class="hero" id="top"><span class="kicker">AI HOT · 每日晨报</span>
+<h1>今日 AI 晨报</h1><p class="sub">7月8日 周三 · 共 24 条精选</p>
+<a class="cta" href="2026-07/ai-hot-daily-2026-07-08.html">阅读今日晨报 →</a></section>
+<section class="archive" id="archive"><h2>历史归档</h2>
+<input id="search" class="search" placeholder="搜索日期或星期，如 07-08 或 周三" aria-label="搜索归档">
+<div class="grid days" id="days"></div></section>
+</main>
+<footer class="wrap">数据源 <a href="https://aihot.virxact.com/daily/2026-07-08" target="_blank" rel="noopener noreferrer">AI HOT</a> · 每日自动生成 · 北京时间</footer>
+<script id="daysdata" type="application/json">[{"date": "2026-07-08", "wd": "周三", "href": "2026-07/ai-hot-daily-2026-07-08.html", "label": "7月8日"}]</script>
+<script>class ThemeManager{
+  constructor(){this.current=this.stored()||this.system();this.apply(this.current);this.init();}
+  system(){return matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}
+  stored(){return localStorage.getItem("theme");}
+  apply(t){if(t==="system"){document.documentElement.removeAttribute("data-theme");localStorage.removeItem("theme");}else{document.documentElement.setAttribute("data-theme",t);localStorage.setItem("theme",t);}this.current=t;this.ui();}
+  init(){var t=document.querySelector(".theme-toggle");if(t)t.addEventListener("click",function(e){var b=e.target.closest("button[data-theme]");if(b)this.apply(b.dataset.theme);}.bind(this));}
+  ui(){document.querySelectorAll(".theme-toggle button").forEach(function(b){var on=b.dataset.theme===this.current;b.classList.toggle("active",on);b.setAttribute("aria-checked",on);}.bind(this));}
+}
+(function(){
+  var data=JSON.parse(document.getElementById("daysdata").textContent);
+  var grid=document.getElementById("days");
+  function render(list){grid.innerHTML="";list.forEach(function(d){var a=document.createElement("a");a.className="day";a.href=d.href;a.innerHTML='<span class="d">'+d.label+'</span><span class="w">'+d.wd+'</span><span class="go">查看报告 →</span>';grid.appendChild(a);});if(!list.length)grid.innerHTML='<p class="empty">没有匹配的日期</p>';}
+  render(data);
+  var inp=document.getElementById("search");
+  inp.addEventListener("input",function(){var q=inp.value.trim().toLowerCase();if(!q){render(data);return;}render(data.filter(function(d){return (d.date+" "+d.wd+" "+d.label).toLowerCase().indexOf(q)>=0;}));});
+  new ThemeManager();
+})();</script>
+</body></html>
