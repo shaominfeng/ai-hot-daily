@@ -1,6 +1,6 @@
 # AI HOT 每日晨报归档
 
-每日自动抓取的 [AI HOT](https://aihot.virxact.com) 日报，渲染为单文件 HTML 仪表盘，按月份分文件夹归档。
+每日自动抓取的 [AI HOT](https://aihot.virxact.com/daily/2026-07-10) 日报，渲染为单文件 HTML 仪表盘，按月份分文件夹归档。
 
 🌐 **在线阅读（GitHub Pages）**：https://shaominfeng.github.io/ai-hot-daily/
 
