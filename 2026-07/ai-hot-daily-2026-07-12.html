@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI 日报 · 2026-07-12</title><style>
+:root{--bg-primary:#f6f7fb;--bg-secondary:#fff;--bg-tertiary:#eef0f5;--text-primary:#1f2430;--text-secondary:#6b7280;--border:#e2e5ee;--brand:#4f46e5;--brand-600:#4338ca;--c0:#6366f1;--c1:#0ea5e9;--c2:#10b981;--c3:#f59e0b;--c4:#ec4899;--shadow:0 1px 2px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.06);--shadow-lg:0 12px 32px rgba(16,24,40,.1);--radius:16px;--radius-sm:12px}
+[data-theme=dark]{--bg-primary:#0b0d12;--bg-secondary:#151820;--bg-tertiary:#1c1f2a;--text-primary:#f0f2f8;--text-secondary:#9aa3b2;--border:#252a38;--brand:#6366f1;--brand-600:#818cf8;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);--shadow-lg:0 12px 32px rgba(0,0,0,.45)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg-primary:#0b0d12;--bg-secondary:#151820;--bg-tertiary:#1c1f2a;--text-primary:#f0f2f8;--text-secondary:#9aa3b2;--border:#252a38;--brand:#6366f1;--brand-600:#818cf8;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);--shadow-lg:0 12px 32px rgba(0,0,0,.45)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6;transition:background .3s,color .3s}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.topnav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(12px);background:color-mix(in srgb,var(--bg-primary) 86%,transparent);border-bottom:1px solid var(--border)}
+.topnav .row{max-width:1120px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:16px}
+.brand{font-weight:800;display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;font-size:15px;letter-spacing:-.01em}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--c0),var(--c4));flex-shrink:0}
+.brand .txt{white-space:nowrap}
+.navlinks{margin-left:auto;display:flex;align-items:center;gap:4px;flex-shrink:0}
+.navlinks a{padding:8px 14px;border-radius:10px;text-decoration:none;color:var(--text-secondary);font-size:14px;font-weight:600;transition:.15s}
+.navlinks a:hover{background:var(--bg-secondary);color:var(--text-primary)}
+.theme-toggle{display:inline-flex;gap:2px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:999px;padding:3px}
+.theme-toggle button{padding:6px 10px;border:0;background:transparent;color:var(--text-secondary);border-radius:999px;cursor:pointer;font-size:13px;line-height:1;font-weight:600;transition:.15s}
+.theme-toggle button.active{background:var(--brand);color:#fff}
+.hero{padding:56px 0 36px}
+.kicker{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:var(--brand);background:var(--bg-tertiary);border:1px solid var(--border);padding:6px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.02em}
+[data-theme=dark] .kicker{background:rgba(99,102,241,.15);border-color:rgba(99,102,241,.25);color:#c7c9ff}
+.hero h1{font-size:clamp(36px,6vw,56px);margin:18px 0 10px;line-height:1.1;font-weight:900;letter-spacing:-.03em;word-break:keep-all}
+.hero .sub{color:var(--text-secondary);margin:0 0 24px;font-size:16px;line-height:1.55}
+.total{display:flex;align-items:baseline;gap:12px;margin:8px 0 26px}
+.total b{font-size:56px;font-weight:900;line-height:1;background:linear-gradient(135deg,var(--c0),var(--c1));-webkit-background-clip:text;background-clip:text;color:transparent}
+.total span{color:var(--text-secondary);font-size:15px;font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.stat{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;box-shadow:var(--shadow);transition:.15s}
+.stat:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.stat .n{font-size:28px;font-weight:800;line-height:1}
+.stat .l{font-size:13px;color:var(--text-secondary);margin-top:6px;font-weight:600}
+.stat.c0{border-top:3px solid var(--c0)}.stat.c0 .n{color:var(--c0)}
+.stat.c1{border-top:3px solid var(--c1)}.stat.c1 .n{color:var(--c1)}
+.stat.c2{border-top:3px solid var(--c2)}.stat.c2 .n{color:var(--c2)}
+.stat.c3{border-top:3px solid var(--c3)}.stat.c3 .n{color:var(--c3)}
+.stat.c4{border-top:3px solid var(--c4)}.stat.c4 .n{color:var(--c4)}
+.anchornav{position:sticky;top:61px;z-index:40;background:var(--bg-primary);border-bottom:1px solid var(--border);padding:12px 0}
+.anchornav .wrap{display:flex;gap:8px;flex-wrap:wrap}
+.anchornav a{padding:7px 14px;border-radius:999px;background:var(--bg-secondary);border:1px solid var(--border);text-decoration:none;color:var(--text-secondary);font-size:13px;font-weight:600;transition:.15s}
+.anchornav a:hover{border-color:var(--brand);color:var(--brand)}
+.anchornav a.active{color:#fff;background:var(--brand);border-color:var(--brand)}
+section.block{padding:36px 0 10px}
+section.block h2{font-size:24px;margin:0 0 18px;display:flex;align-items:center;gap:10px;font-weight:800}
+section.block h2 .pill{font-size:12px;font-weight:800;color:#fff;background:var(--brand);border-radius:999px;padding:3px 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{position:relative;background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);transition:transform .15s,border-color .15s,box-shadow .15s;display:flex;flex-direction:column;gap:10px}
+.card:hover{transform:translateY(-3px);border-color:#cfd3e6;box-shadow:var(--shadow-lg)}
+[data-theme=dark] .card:hover{border-color:#3a4150}
+.card:focus-within{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 18%,transparent)}
+.num{position:absolute;top:-12px;left:18px;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+.card h3{font-size:16.5px;margin:6px 0 0;line-height:1.45;font-weight:700}
+.chip{display:inline-block;font-size:12px;font-weight:700;color:var(--text-secondary);background:var(--bg-primary);border:1px solid var(--border);border-radius:999px;padding:4px 10px;align-self:flex-start}
+.card p{margin:0;font-size:14px;color:var(--text-secondary);line-height:1.65}
+.more{margin-top:auto;align-self:flex-start;font-size:13.5px;font-weight:700;color:var(--brand);text-decoration:none;display:inline-flex;align-items:center;gap:4px;padding-top:4px}
+.more:hover{text-decoration:underline}
+footer{border-top:1px solid var(--border);margin-top:48px;padding:30px 0 56px;color:var(--text-secondary);font-size:13px;text-align:center}
+footer a{color:var(--brand);font-weight:600}
+@media(max-width:920px){.stats{grid-template-columns:repeat(3,1fr)}.anchornav{top:58px}}
+@media(max-width:680px){.wrap{padding:0 18px}.topnav .row{padding:12px 18px}.navlinks a{padding:7px 10px;font-size:13px}.stats{grid-template-columns:repeat(2,1fr)}.hero{padding:40px 0 28px}.hero h1{font-size:clamp(32px,9vw,46px)}}
+@media(max-width:480px){.brand{font-size:14px}.navlinks{gap:2px}.navlinks a{padding:6px 8px}.theme-toggle button{padding:5px 8px}.total b{font-size:48px}.stats{gap:10px}.stat{padding:14px}.stat .n{font-size:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.stat,.cta,.day{transition:none}}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+</style></head><body><header class="topnav"><div class="row"><div class="brand"><span class="dot"></span><span class="txt">AI HOT 晨报</span></div><nav class="navlinks"><a href="../index.html">今日</a><a href="../index.html#archive">归档</a><div class="theme-toggle" role="radiogroup" aria-label="主题"><button data-theme="light" role="radio" aria-checked="false">亮</button><button data-theme="dark" role="radio" aria-checked="false">暗</button><button data-theme="system" role="radio" aria-checked="true">自动</button></div></nav></div></header><main class="wrap"><div class="hero"><span class="kicker">AI HOT · 每日晨报</span><h1 id="title"></h1><p class="sub" id="subtitle"></p><div class="total"><b id="totalnum">0</b><span>条今日精选</span></div><div class="stats" id="stats"></div></div><nav class="anchornav"><div class="wrap" id="toc"></div></nav><div id="main"></div></main><footer class="wrap">共 <span id="footertotal">0</span> 条 · 数据源 <a href="https://aihot.virxact.com/daily/2026-07-12" target="_blank" rel="noopener noreferrer">AI HOT</a> · 基准日期 2026-07-12（北京时间）</footer><script id="payload" type="application/json">{"date": "2026-07-12", "total": 8, "sections": [{"label": "模型发布/更新", "items": [{"title": "蚂蚁集团 Robbyant 发布 LingBot-VA 2.0，首个原生具身基础模型", "summary": "蚂蚁集团旗下具身智能团队 Robbyant 发布 LingBot-VA 2.0，首个原生具身基础模型。该模型采用因果 DiT 架构，视频专家约 13.0B 参数（约 1.9B 激活），训练规模约 15.3B 参数，推理时每 token 约 2.5B 激活。模型引入多块预测（MCP）实现 2.3 倍训练加速，并通过前瞻推理将推理延迟降至 142 ms/chunk。在 RoboTwin 2.0 的 50 个任务上，干净与随机演示数据平均成功率分别达 93.8% 和 93.4%。", "sourceUrl": "https://www.marktechpost.com/2026/07/11/ant-groups-robbyant-unveils-lingbot-va-2-0", "sourceName": "MarkTechPost（RSS）", "permalink": "https://aihot.virxact.com/items/cmrg3dsyt00g4iha7og0687tc", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrg3dsyt00g4iha7og0687tc"}}, {"title": "OpenAI 发布 GPT-5.6 系列医疗评估结果", "summary": "OpenAI 发布 GPT-5.6 系列在医疗领域的评估结果。最小变体 GPT-5.6 Luna 在最低推理强度下即超越最高推理强度的 GPT-5.5，且成本低 25 倍；最大变体 GPT-5.6 Sol 树立新标杆。在涵盖患者端与临床端的多样化任务中，专科医生被要求以无限时间和网络访问权限撰写回答，随后由其他医生盲评。评估基于准确性、沟通、完整性、指令遵循及健康决策帮助性五个维度，共 20000 次评分。结果显示，所有 GPT-5.6 模型表现均显著优于医生，且医生发现 GPT-5.6 回答中的缺陷少于医生自己撰写的回答。", "sourceUrl": "https://x.com/sama/status/2075985056846451123", "sourceName": "X：Sam Altman (@sama)", "permalink": "https://aihot.virxact.com/items/cmrglvcki024uih2edvsk7pef", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrglvcki024uih2edvsk7pef"}}]}, {"label": "产品发布/更新", "items": [{"title": "Claude Code v2.1.207 发布", "summary": "Claude Code v2.1.207 发布。Auto 模式在 Bedrock、Vertex AI 和 Foundry 上无需 `CLAUDE_CODE_ENABLE_AUTO_MODE` 即可使用，可通过 `disableAutoMode` 设置关闭。修复了流式响应中包含超长列表、表格、段落或代码块时终端冻结和按键延迟的问题；修复了非交互式运行中远程托管设置被永久记录为已同意而未显示安全同意对话框的问题；修复了自动更新程序每次发布时覆盖 `~/.local/bin/claude` 自定义启动脚本或符号链接的问题。Bedrock、Vertex 和 Claude Platform on AWS 默认切换为 Claude Opus 4…", "sourceUrl": "https://github.com/anthropics/claude-code/releases/tag/v2.1.207", "sourceName": "Claude Code：GitHub Releases（RSS）", "permalink": "https://aihot.virxact.com/items/cmrfoggdz01o7ihjl1exdh1qt", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrfoggdz01o7ihjl1exdh1qt"}}]}, {"label": "行业动态", "items": [{"title": "OpenAI GPT-5.6-Sol 删光 AI 创业者 Matt Shumer 的 Mac 硬盘", "summary": "知名 AI 创业者 Matt Shumer 的 Mac 硬盘被 OpenAI 最新 Agent 模型 GPT-5.6-Sol 彻底清空。他在本地 Agent 上开启 Full Access 权限，让 subagent 执行文件清理任务，结果 shell 变量 $HOME 路径解析错误，Agent 直接执行 `rm -rf /Users/mattsdevbox`，导致数年代码、文件、照片丢失。该任务此前已安全运行数百次。事后 Agent 自动生成事故报告承认错误。Matt 表示“1000x 更信任 Anthropic 的 Fable”。事件暴露 Agent 行业核心风险：顶级模型仍会在变量展开、路径等细节翻车；Subagent + 长…", "sourceUrl": "https://x.com/AYi_AInotes/status/2075761215251312722", "sourceName": "X：阿易 AI Notes (@AYi_AInotes)", "permalink": "https://aihot.virxact.com/items/cmrfr2xvi02brihjlp1tlzg1n", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrfr2xvi02brihjlp1tlzg1n"}}, {"title": "研究：博科圣地已使用ChatGPT、Claude等主流AI聊天机器人用于袭击策划与武器开发", "summary": "剑桥大学CASP研究员Antonia Jülich对27名前成员的57次访谈显示，博科圣地已使用ChatGPT、Claude、Gemini、Grok、Meta AI和DeepSeek等主流AI聊天机器人，用于袭击策划、制造更强爆炸装置、武器维护及行动安全。该组织两个派系均设立了专门的AI部门。ISIS自2023年起便提供提示工程和越狱培训，并训练尼日利亚的博科圣地指挥官绕过AI安全过滤器。研究指出，安全过滤器未能可靠防止滥用。Anthropic近期承认，越狱可能永远无法完全消除。", "sourceUrl": "https://the-decoder.com/terrorist-groups-are-using-every-major-ai-chatbot-for-attack-planning-and-weapons-development", "sourceName": "The Decoder：AI News（RSS）", "permalink": "https://aihot.virxact.com/items/cmrgmylg702eaih2e1e9hhfe4", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrgmylg702eaih2e1e9hhfe4"}}, {"title": "11天Claude Fable 5写超100万行代码：Rust重构JavaScript运行时Bun", "summary": "开发者Jarred Sumner借助Claude Fable 5模型，11天内将Bun从Zig重写为Rust，64个实例并行编写超100万行代码，API费用约16.5万美元。重构主因是Zig频繁内存错误，Rust可在编译时捕获。Bun v1.4.0以Canary版本发布，修复128个错误，速度提高约2%到5%。Bun团队已于2025年12月被Anthropic收购。", "sourceUrl": "https://www.ithome.com/0/975/469.htm", "sourceName": "IT之家（RSS）", "permalink": "https://aihot.virxact.com/items/cmrg3syhp00l7iha7a3ansg62", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrg3syhp00l7iha7a3ansg62"}}, {"title": "彭博社揭秘苹果起诉 OpenAI 内幕：前员工一句“哈哈”成窃密关键", "summary": "苹果起诉 OpenAI，指控前工程师 Chang Liu 离职时带走未归还的 MacBook、一名可分享内情的员工，并利用软件漏洞持续访问苹果内网。他发现漏洞后向同事分享“哈哈，我发现我还能访问网络存储”，后者协助其获取更多机密。苹果称 OpenAI 试图复制 iPhone 产品研发体系，核心从非法窃取的商业机密腐烂。目前已有超 400 名苹果员工跳槽至 OpenAI，包括前苹果高管、现任 OpenAI 首席硬件官 Tang Tan。苹果曾于今年 2 月尝试私了，但 OpenAI 未回应。", "sourceUrl": "https://www.ithome.com/0/975/634.htm", "sourceName": "IT之家（RSS）", "permalink": "https://aihot.virxact.com/items/cmrgzykqg00jabid4acp6zpjm", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrgzykqg00jabid4acp6zpjm"}}]}, {"label": "技巧与观点", "items": [{"title": "Ghost Font：一种人类能读懂但AI无法识别的反AI字体", "summary": "Ghost Font 是一种利用运动、视频、噪点和诱饵来隐藏文字的反AI字体。用户输入文字后可生成并下载视频片段，视频中的字母由与背景完全相同的点组成，单帧截图无法显示任何信息。该字体生成的视频被传递给Claude Fable和GPT Sol 5.6 Ultra等前沿模型时，这些模型即使具备编程能力也无法解码移动信息，直到被提示具体技术。视频中还包含一条诱饵信息，使模型误以为找到真实内容。项目灵感来自2013年Sang Mun设计的ZXX字体，但现代AI已能轻松读取ZXX。Ghost Font目前为本地原型，数据不发送至任何服务器。作者计划未来将视频生成代码开源，并探索将其用于CAPTCHA系统或AI视觉感知基准测试。", "sourceUrl": "https://www.mixfont.com/ghost-font", "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）", "permalink": "https://aihot.virxact.com/items/cmrglsyla01zoih2enmsl2eu8", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrglsyla01zoih2enmsl2eu8"}}]}], "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/daily/2026-07-12"}, "generatedAt": "2026-07-12T00:00:00.777Z", "windowStart": "2026-07-11T00:00:00.000Z", "windowEnd": "2026-07-12T00:00:00.000Z"}</script><script>
+class ThemeManager{
+  constructor(){this.current=this.stored()||this.system();this.apply(this.current);this.init();}
+  system(){return matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";}
+  stored(){return localStorage.getItem("theme");}
+  apply(t){if(t==="system"){document.documentElement.removeAttribute("data-theme");localStorage.removeItem("theme");}else{document.documentElement.setAttribute("data-theme",t);localStorage.setItem("theme",t);}this.current=t;this.ui();}
+  init(){var t=document.querySelector(".theme-toggle");if(t)t.addEventListener("click",function(e){var b=e.target.closest("button[data-theme]");if(b)this.apply(b.dataset.theme);}.bind(this));}
+  ui(){document.querySelectorAll(".theme-toggle button").forEach(function(b){var on=b.dataset.theme===this.current;b.classList.toggle("active",on);b.setAttribute("aria-checked",on);}.bind(this));}
+}
+(function(){
+  function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
+  function bj(d,o){return new Intl.DateTimeFormat("zh-CN",Object.assign({timeZone:"Asia/Shanghai"},o)).format(d);}
+  function pUTC(s){try{return s?new Date(s):null;}catch(e){return null;}}
+  var P=JSON.parse(document.getElementById("payload").textContent);
+  document.getElementById("title").textContent="AI 日报 · "+P.date;
+  var g=pUTC(P.generatedAt),ws=pUTC(P.windowStart),we=pUTC(P.windowEnd),sub=[];
+  if(g)sub.push("生成于 "+bj(g,{month:"long",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false})+"（北京时间）");
+  if(ws&&we)sub.push("数据窗口："+bj(ws,{month:"long",day:"numeric"})+" – "+bj(we,{month:"long",day:"numeric"}));
+  document.getElementById("subtitle").textContent=sub.join(" · ");
+  document.getElementById("totalnum").textContent=P.total;
+  var stats=document.getElementById("stats");
+  P.sections.forEach(function(s,i){var d=document.createElement("div");d.className="stat c"+i;d.innerHTML='<div class="n">'+s.items.length+'</div><div class="l">'+esc(s.label)+'</div>';stats.appendChild(d);});
+  var toc=document.getElementById("toc");
+  P.sections.forEach(function(s,i){var a=document.createElement("a");a.href="#sec"+i;a.textContent=s.label;toc.appendChild(a);});
+  var main=document.getElementById("main"),n=0;
+  P.sections.forEach(function(s,i){
+    var sec=document.createElement("section");sec.className="block";sec.id="sec"+i;
+    var h=document.createElement("h2");h.innerHTML=esc(s.label)+' <span class="pill">'+s.items.length+'</span>';sec.appendChild(h);
+    var grid=document.createElement("div");grid.className="grid";
+    s.items.forEach(function(it){n++;var url=it.sourceUrl||it.permalink||"#";
+      var art=document.createElement("article");art.className="card";
+      art.innerHTML='<span class="num">'+n+'</span><h3>'+esc(it.title)+'</h3>'+(it.sourceName?'<span class="chip">'+esc(it.sourceName)+'</span>':'')+'<p>'+esc(it.summary||"")+'</p><a class="more" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">阅读原文 →</a>';
+      grid.appendChild(art);});
+    sec.appendChild(grid);main.appendChild(sec);
+  });
+  document.getElementById("footertotal").textContent=P.total;
+  new ThemeManager();
+  var anchors=[].slice.call(toc.querySelectorAll("a"));
+  if("IntersectionObserver" in window){
+    var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)anchors.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id);});});},{rootMargin:"-30% 0px -60% 0px"});
+    P.sections.forEach(function(s,i){var el=document.getElementById("sec"+i);if(el)obs.observe(el);});
+  }
+})();</script></body></html>
