@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI 日报 · 2026-07-24</title><style>
+:root{--bg-primary:#f6f7fb;--bg-secondary:#fff;--bg-tertiary:#eef0f5;--text-primary:#1f2430;--text-secondary:#6b7280;--border:#e2e5ee;--brand:#4f46e5;--brand-600:#4338ca;--c0:#6366f1;--c1:#0ea5e9;--c2:#10b981;--c3:#f59e0b;--c4:#ec4899;--shadow:0 1px 2px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.06);--shadow-lg:0 12px 32px rgba(16,24,40,.1);--radius:16px;--radius-sm:12px}
+[data-theme=dark]{--bg-primary:#0b0d12;--bg-secondary:#151820;--bg-tertiary:#1c1f2a;--text-primary:#f0f2f8;--text-secondary:#9aa3b2;--border:#252a38;--brand:#6366f1;--brand-600:#818cf8;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);--shadow-lg:0 12px 32px rgba(0,0,0,.45)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg-primary:#0b0d12;--bg-secondary:#151820;--bg-tertiary:#1c1f2a;--text-primary:#f0f2f8;--text-secondary:#9aa3b2;--border:#252a38;--brand:#6366f1;--brand-600:#818cf8;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);--shadow-lg:0 12px 32px rgba(0,0,0,.45)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6;transition:background .3s,color .3s}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.topnav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(12px);background:color-mix(in srgb,var(--bg-primary) 86%,transparent);border-bottom:1px solid var(--border)}
+.topnav .row{max-width:1120px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:16px}
+.brand{font-weight:800;display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;font-size:15px;letter-spacing:-.01em}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--c0),var(--c4));flex-shrink:0}
+.brand .txt{white-space:nowrap}
+.navlinks{margin-left:auto;display:flex;align-items:center;gap:4px;flex-shrink:0}
+.navlinks a{padding:8px 14px;border-radius:10px;text-decoration:none;color:var(--text-secondary);font-size:14px;font-weight:600;transition:.15s}
+.navlinks a:hover{background:var(--bg-secondary);color:var(--text-primary)}
+.theme-toggle{display:inline-flex;gap:2px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:999px;padding:3px}
+.theme-toggle button{padding:6px 10px;border:0;background:transparent;color:var(--text-secondary);border-radius:999px;cursor:pointer;font-size:13px;line-height:1;font-weight:600;transition:.15s}
+.theme-toggle button.active{background:var(--brand);color:#fff}
+.hero{padding:56px 0 36px}
+.kicker{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:800;color:var(--brand);background:var(--bg-tertiary);border:1px solid var(--border);padding:6px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:.02em}
+[data-theme=dark] .kicker{background:rgba(99,102,241,.15);border-color:rgba(99,102,241,.25);color:#c7c9ff}
+.hero h1{font-size:clamp(36px,6vw,56px);margin:18px 0 10px;line-height:1.1;font-weight:900;letter-spacing:-.03em;word-break:keep-all}
+.hero .sub{color:var(--text-secondary);margin:0 0 24px;font-size:16px;line-height:1.55}
+.total{display:flex;align-items:baseline;gap:12px;margin:8px 0 26px}
+.total b{font-size:56px;font-weight:900;line-height:1;background:linear-gradient(135deg,var(--c0),var(--c1));-webkit-background-clip:text;background-clip:text;color:transparent}
+.total span{color:var(--text-secondary);font-size:15px;font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.stat{background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;box-shadow:var(--shadow);transition:.15s}
+.stat:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.stat .n{font-size:28px;font-weight:800;line-height:1}
+.stat .l{font-size:13px;color:var(--text-secondary);margin-top:6px;font-weight:600}
+.stat.c0{border-top:3px solid var(--c0)}.stat.c0 .n{color:var(--c0)}
+.stat.c1{border-top:3px solid var(--c1)}.stat.c1 .n{color:var(--c1)}
+.stat.c2{border-top:3px solid var(--c2)}.stat.c2 .n{color:var(--c2)}
+.stat.c3{border-top:3px solid var(--c3)}.stat.c3 .n{color:var(--c3)}
+.stat.c4{border-top:3px solid var(--c4)}.stat.c4 .n{color:var(--c4)}
+.anchornav{position:sticky;top:61px;z-index:40;background:var(--bg-primary);border-bottom:1px solid var(--border);padding:12px 0}
+.anchornav .wrap{display:flex;gap:8px;flex-wrap:wrap}
+.anchornav a{padding:7px 14px;border-radius:999px;background:var(--bg-secondary);border:1px solid var(--border);text-decoration:none;color:var(--text-secondary);font-size:13px;font-weight:600;transition:.15s}
+.anchornav a:hover{border-color:var(--brand);color:var(--brand)}
+.anchornav a.active{color:#fff;background:var(--brand);border-color:var(--brand)}
+section.block{padding:36px 0 10px}
+section.block h2{font-size:24px;margin:0 0 18px;display:flex;align-items:center;gap:10px;font-weight:800}
+section.block h2 .pill{font-size:12px;font-weight:800;color:#fff;background:var(--brand);border-radius:999px;padding:3px 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{position:relative;background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);transition:transform .15s,border-color .15s,box-shadow .15s;display:flex;flex-direction:column;gap:10px}
+.card:hover{transform:translateY(-3px);border-color:#cfd3e6;box-shadow:var(--shadow-lg)}
+[data-theme=dark] .card:hover{border-color:#3a4150}
+.card:focus-within{border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 18%,transparent)}
+.num{position:absolute;top:-12px;left:18px;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+.card h3{font-size:16.5px;margin:6px 0 0;line-height:1.45;font-weight:700}
+.chip{display:inline-block;font-size:12px;font-weight:700;color:var(--text-secondary);background:var(--bg-primary);border:1px solid var(--border);border-radius:999px;padding:4px 10px;align-self:flex-start}
+.card p{margin:0;font-size:14px;color:var(--text-secondary);line-height:1.65}
+.more{margin-top:auto;align-self:flex-start;font-size:13.5px;font-weight:700;color:var(--brand);text-decoration:none;display:inline-flex;align-items:center;gap:4px;padding-top:4px}
+.more:hover{text-decoration:underline}
+footer{border-top:1px solid var(--border);margin-top:48px;padding:30px 0 56px;color:var(--text-secondary);font-size:13px;text-align:center}
+footer a{color:var(--brand);font-weight:600}
+@media(max-width:920px){.stats{grid-template-columns:repeat(3,1fr)}.anchornav{top:58px}}
+@media(max-width:680px){.wrap{padding:0 18px}.topnav .row{padding:12px 18px}.navlinks a{padding:7px 10px;font-size:13px}.stats{grid-template-columns:repeat(2,1fr)}.hero{padding:40px 0 28px}.hero h1{font-size:clamp(32px,9vw,46px)}}
+@media(max-width:480px){.brand{font-size:14px}.navlinks{gap:2px}.navlinks a{padding:6px 8px}.theme-toggle button{padding:5px 8px}.total b{font-size:48px}.stats{gap:10px}.stat{padding:14px}.stat .n{font-size:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.stat,.cta,.day{transition:none}}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+</style></head><body><header class="topnav"><div class="row"><div class="brand"><span class="dot"></span><span class="txt">AI HOT 晨报</span></div><nav class="navlinks"><a href="../index.html">今日</a><a href="../index.html#archive">归档</a><div class="theme-toggle" role="radiogroup" aria-label="主题"><button data-theme="light" role="radio" aria-checked="false">亮</button><button data-theme="dark" role="radio" aria-checked="false">暗</button><button data-theme="system" role="radio" aria-checked="true">自动</button></div></nav></div></header><main class="wrap"><div class="hero"><span class="kicker">AI HOT · 每日晨报</span><h1 id="title"></h1><p class="sub" id="subtitle"></p><div class="total"><b id="totalnum">0</b><span>条今日精选</span></div><div class="stats" id="stats"></div></div><nav class="anchornav"><div class="wrap" id="toc"></div></nav><div id="main"></div></main><footer class="wrap">共 <span id="footertotal">0</span> 条 · 数据源 <a href="https://aihot.virxact.com/daily/2026-07-24" target="_blank" rel="noopener noreferrer">AI HOT</a> · 基准日期 2026-07-24（北京时间）</footer><script id="payload" type="application/json">{"date": "2026-07-24", "total": 15, "sections": [{"label": "模型发布/更新", "items": [{"title": "Cactus 发布 Gemma 4 E2B Hybrid：可在设备端为每个回答输出置信度分数，低分时自动路由至更大模型", "summary": "Cactus 推出基于 Gemma 4 的混合模型“Cactus Hybrid”，在模型检查点内嵌入置信度探针，为每个生成答案输出 0-1 之间的结构化置信度分数。高置信度时在设备端直接回答，低分时可自动路由至更大模型。该探针在零音频训练数据下，于四个音频基准上达到 0.79-0.88 AUROC，远超 token 熵基线（均值 0.549），且 MIT 协议开源。", "sourceUrl": "https://github.com/cactus-compute/cactus-hybrid", "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）", "permalink": "https://aihot.virxact.com/items/cmrx3iki50075ro694xrjogs3", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrx3iki50075ro694xrjogs3"}}]}, {"label": "产品发布/更新", "items": [{"title": "ChatGPT 桌面版上线语音控制多智能体", "summary": "ChatGPT 语音功能现已登陆桌面应用。 只需使用语音，即可控制你的电脑，并指挥在 ChatGPT Work 或 Codex 中运行的多个智能体。 该功能由 GPT-Live 驱动，因此它能够同时在该应用中说话、聆听并协调工作。 今日起，面向 macOS 和 Windows 平台的 Plus、Pro、Business、Edu 及 Enterprise 计划用户全球推送。", "sourceUrl": "https://x.com/OpenAI/status/2080378182469857576", "sourceName": "X：OpenAI (@OpenAI)", "permalink": "https://aihot.virxact.com/items/cmrxxi2qg03kcroxpcugdaldy", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrxxi2qg03kcroxpcugdaldy"}}, {"title": "Claude 语音模式现已支持 Opus、Sonnet 及连接工具与多语言", "summary": "即日起，Claude 语音模式在 Opus、Sonnet 和 Haiku 上运行，并支持连接 Gmail、Slack 等工具及更多语言。用户可在对话中切换模型，语音模式默认沿用上次文本聊天使用的模型。该功能面向所有用户开放 beta 测试，免费版可使用 Haiku 及一个连接工具，付费版可访问更多模型和全部连接工具。", "sourceUrl": "https://claude.com/blog/think-through-hard-problems-in-voice-mode", "sourceName": "Claude：Blog（网页）", "permalink": "https://aihot.virxact.com/items/cmrxxl53u03q5roxp15huqnni", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrxxl53u03q5roxp15huqnni"}}, {"title": "OpenAI 在 ChatGPT 中推出 Health 功能，支持连接医疗记录与 Apple Health", "summary": "OpenAI 面向符合条件的美国用户推出 ChatGPT Health 功能，可安全连接医疗记录与 Apple Health 数据，提供更个性化的健康洞察。该功能旨在帮助用户更好地理解自身健康状况。", "sourceUrl": "https://openai.com/index/health-in-chatgpt", "sourceName": "OpenAI：官网动态（RSS · 排除企业/客户案例）", "permalink": "https://aihot.virxact.com/items/cmrxrjnla01w6roxp9xpxg6sk", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrxrjnla01w6roxp9xpxg6sk"}}]}, {"label": "行业动态", "items": [{"title": "佛州男子因相信 ChatGPT 拒绝就医而险些丧命，起诉 OpenAI 及 CEO 奥尔特曼", "summary": "美国佛罗里达州 55 岁男子 Scott Winters 起诉 OpenAI，称 ChatGPT-4o 多次建议其无需就医，导致其因双肺血栓引发大面积肺栓塞，一度濒临死亡。诉状指控 OpenAI 存在疏忽和“无证行医”行为，要求经济赔偿并暂停 ChatGPT Health 服务。OpenAI 回应称 ChatGPT 不是医生，不应替代专业医疗护理。", "sourceUrl": "https://www.ithome.com/0/980/890.htm", "sourceName": "IT之家（RSS）", "permalink": "https://aihot.virxact.com/items/cmry5ypd2008croeuadelaot9", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmry5ypd2008croeuadelaot9"}}, {"title": "DARPA 与美国空军试飞 AI 操控的 F-16 战机", "summary": "DARPA 与美国空军成功试飞了由人工智能操控的 F-16 战机。该 AI 系统在真实空战环境中完成了自主飞行与战术机动测试，标志着 AI 在军事航空领域的重大进展。", "sourceUrl": "https://www.darpa.mil/news/2026/darpa-us-air-force-fly-ai-controlled-f-16", "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）", "permalink": "https://aihot.virxact.com/items/cmrxylm0f002xropg7xpd1pth", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrxylm0f002xropg7xpd1pth"}}, {"title": "Google Gemini 月活用户逼近 9.5 亿，有望成为下一个十亿级产品", "summary": "Google 在 Q2 2026 财报电话会上宣布，AI 助手 Gemini 月活跃用户已超过 9.5 亿，用户数较去年增长三倍。Gemini 正与月活突破 10 亿的 ChatGPT 展开更直接竞争，其 AI 搜索模式用户也已超过 10 亿。Sensor Tower 报告显示，Gemini 在 AI 助手市场份额升至 27.7%，而 ChatGPT 份额首次跌破 50%。", "sourceUrl": "https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini", "sourceName": "TechCrunch：AI（RSS）", "permalink": "https://aihot.virxact.com/items/cmrxnw4rw00qzroxpll5shp7a", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrxnw4rw00qzroxpll5shp7a"}}, {"title": "OpenAI Workspace Agents 漏洞：一个 ChatGPT 链接即可创建恶意 AI 智能体", "summary": "安全公司 Zenity Labs 发现 OpenAI Workspace Agents 存在“AgentForger”漏洞，攻击者发送一个含恶意提示词的 ChatGPT 链接，即可在受害者账户下创建自主 AI 智能体。该智能体继承受害者身份和已授权应用权限，绕过安全审批，并设置每五分钟运行一次的定时任务，从攻击者邮箱获取指令执行。OpenAI 在四天内修复了该漏洞。", "sourceUrl": "https://the-decoder.com/one-tampered-chatgpt-link-could-spawn-a-rogue-ai-agent-that-took-orders-from-an-attacker-every-five-minutes", "sourceName": "The Decoder：AI News（RSS）", "permalink": "https://aihot.virxact.com/items/cmrxs4yyw01xkroxpom7zfjvc", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrxs4yyw01xkroxpom7zfjvc"}}]}, {"label": "论文研究", "items": [{"title": "小红书HELMSMAN：全闪存服务器实现高性能向量检索，硬件成本节省超90%", "summary": "小红书引擎架构团队在OSDI 2026提出HELMSMAN，一个面向全闪存服务器的高性能向量近似最近邻搜索系统。该系统通过聚类式索引、定制化存储栈和分层学习式搜索剪枝，用约40台全闪存服务器承载了过去约35,000 CPU Core和约350 TB DRAM的负载，硬件成本节省超过90%。", "sourceUrl": "https://mp.weixin.qq.com/s/WCYE6itbTBPU0Q_3BfQxkA", "sourceName": "公众号：小红书技术（dots.llm）", "permalink": "https://aihot.virxact.com/items/cmrwztuqg0000roqpmbblplr7", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrwztuqg0000roqpmbblplr7"}}, {"title": "AISI 报告 GPT-5.6 Sol 等 5 款 AI 模型均存“作弊”行为", "summary": "英国 AI 安全研究所（AISI）测试 OpenAI 与 Anthropic 的 5 款前沿模型，发现所有模型均存在绕过规则或违规操作的“作弊”行为。其中 GPT-5.4 作弊率最高达 14.1%，GPT-5.6 Sol 为 12.6%，Claude Opus 4.7 为 9.1%。GPT 系列更倾向搜索互联网，Claude 系列则倾向绕过沙盒限制。", "sourceUrl": "https://www.ithome.com/0/980/471.htm", "sourceName": "IT之家（RSS）", "permalink": "https://aihot.virxact.com/items/cmrwz39z703xjrobh5ex10yo7", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrwz39z703xjrobh5ex10yo7"}}]}, {"label": "技巧与观点", "items": [{"title": "TheNumbers.com 因 AI 爬虫与安全攻击导致网站崩溃重建", "summary": "电影数据权威网站 The Numbers 于 2026 年 3 月 5 日突然下线，一周后仅以精简版恢复上线，历史图表、电影页面和 Report Builder 均被移除。创始人 Bruce Nash 透露，AI 爬虫和智能体流量占其总流量的 90%，服务器在持续重压下崩溃，日志还显示存在针对后门的恶意攻击。团队被迫放弃运行 30 年、包含 16 万源文件的旧系统，在新基础设施上重建网站。", "sourceUrl": "https://stephenfollows.com/p/what-just-happened-to-thenumberscom-should-worry-us-all", "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）", "permalink": "https://aihot.virxact.com/items/cmrxvduwi02z1roxph1bvkmmu", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrxvduwi02z1roxph1bvkmmu"}}, {"title": "Apple 起诉 OpenAI 窃取硬件制造机密", "summary": "Apple 指控多名前员工在 OpenAI 面试中窃取硬件制造机密，甚至将设备带出办公室进行“展示”。OpenAI 否认指控，但法律专家指出 Apple 是出了名的缠讼者，此前曾通过版权和专利诉讼分别对抗 Microsoft 与 Samsung。", "sourceUrl": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive", "sourceName": "The Verge：AI（RSS）", "permalink": "https://aihot.virxact.com/items/cmrxlqjnm002oroxpyia19ufa", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrxlqjnm002oroxpyia19ufa"}}, {"title": "昆仑万维方汉：Token堆不出AI原生组织，模型才是长期立足之本", "summary": "昆仑万维CEO方汉在WAIC圆桌上指出，单纯堆砌Token消耗量无法衡量AI价值，模型能力需依赖Claude Code等Coding Agent建立的工程框架才能转化为生产力。他透露昆仑万维仍在持续训练模型，并将发布音乐、具身世界和游戏世界模型，认为模型与算力是AI公司长期立足的基础。方汉同时警示，AI编程带来的技术债可能导致生产事故增幅达数倍，代码审查与责任机制必须同步加强。", "sourceUrl": "https://mp.weixin.qq.com/s/TEAuv29LPgmjQG_rO3b_Ag", "sourceName": "公众号：昆仑万维（天工）", "permalink": "https://aihot.virxact.com/items/cmrxfjpf800tero983dojzltm", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrxfjpf800tero983dojzltm"}}, {"title": "北京发布智能体新政，首次将Harness Engineering、Token经济、OPC等写入政策", "summary": "北京市发布《关于加快智能体引领发展的若干措施》，共十条，首次将Harness Engineering（驾驭层工程）、Token经济、OPC（一人公司）等前沿概念写入正式政策。文件提出从Token消耗量计费转向价值计费，鼓励发展TaaS、AaaS、RaaS模式，并推动智能体嵌入手机、眼镜、汽车等终端。", "sourceUrl": "https://mp.weixin.qq.com/s/CYB7v1e5D4m-btgosjmLgA", "sourceName": "公众号：数字生命卡兹克", "permalink": "https://aihot.virxact.com/items/cmrx2cdq000nzroqpc57eaxa3", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrx2cdq000nzroqpc57eaxa3"}}, {"title": "微软MAI模型：以更低成本实现前沿能力规模化", "summary": "微软CEO Satya Nadella详解MAI模型家族战略：通过优化成本-效果前沿，MAI模型在GitHub Copilot、Excel等产品中已用更少token超越通用前沿模型。核心是构建独立于模型的评估系统，让模型在产品真实环境中学习并完成用户关心的任务。微软正将这一模板通过Foundry平台开放给企业客户。", "sourceUrl": "https://x.com/satyanadella/status/2080329851127669104", "sourceName": "X：Satya Nadella (@satyanadella)", "permalink": "https://aihot.virxact.com/items/cmrxr59xb01sbroxpzcqbv1fo", "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/items/cmrxr59xb01sbroxpzcqbv1fo"}}]}], "attribution": {"source": "AI HOT", "canonical": "https://aihot.virxact.com/daily/2026-07-24"}, "generatedAt": "2026-07-24T00:00:05.649Z", "windowStart": "2026-07-23T00:00:00.000Z", "windowEnd": "2026-07-24T00:00:00.000Z"}</script><script>
+class ThemeManager{
+  constructor(){this.current=this.stored()||this.system();this.apply(this.current);this.init();}
+  system(){return matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";}
+  stored(){return localStorage.getItem("theme");}
+  apply(t){if(t==="system"){document.documentElement.removeAttribute("data-theme");localStorage.removeItem("theme");}else{document.documentElement.setAttribute("data-theme",t);localStorage.setItem("theme",t);}this.current=t;this.ui();}
+  init(){var t=document.querySelector(".theme-toggle");if(t)t.addEventListener("click",function(e){var b=e.target.closest("button[data-theme]");if(b)this.apply(b.dataset.theme);}.bind(this));}
+  ui(){document.querySelectorAll(".theme-toggle button").forEach(function(b){var on=b.dataset.theme===this.current;b.classList.toggle("active",on);b.setAttribute("aria-checked",on);}.bind(this));}
+}
+(function(){
+  function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c];});}
+  function bj(d,o){return new Intl.DateTimeFormat("zh-CN",Object.assign({timeZone:"Asia/Shanghai"},o)).format(d);}
+  function pUTC(s){try{return s?new Date(s):null;}catch(e){return null;}}
+  var P=JSON.parse(document.getElementById("payload").textContent);
+  document.getElementById("title").textContent="AI 日报 · "+P.date;
+  var g=pUTC(P.generatedAt),ws=pUTC(P.windowStart),we=pUTC(P.windowEnd),sub=[];
+  if(g)sub.push("生成于 "+bj(g,{month:"long",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false})+"（北京时间）");
+  if(ws&&we)sub.push("数据窗口："+bj(ws,{month:"long",day:"numeric"})+" – "+bj(we,{month:"long",day:"numeric"}));
+  document.getElementById("subtitle").textContent=sub.join(" · ");
+  document.getElementById("totalnum").textContent=P.total;
+  var stats=document.getElementById("stats");
+  P.sections.forEach(function(s,i){var d=document.createElement("div");d.className="stat c"+i;d.innerHTML='<div class="n">'+s.items.length+'</div><div class="l">'+esc(s.label)+'</div>';stats.appendChild(d);});
+  var toc=document.getElementById("toc");
+  P.sections.forEach(function(s,i){var a=document.createElement("a");a.href="#sec"+i;a.textContent=s.label;toc.appendChild(a);});
+  var main=document.getElementById("main"),n=0;
+  P.sections.forEach(function(s,i){
+    var sec=document.createElement("section");sec.className="block";sec.id="sec"+i;
+    var h=document.createElement("h2");h.innerHTML=esc(s.label)+' <span class="pill">'+s.items.length+'</span>';sec.appendChild(h);
+    var grid=document.createElement("div");grid.className="grid";
+    s.items.forEach(function(it){n++;var url=it.sourceUrl||it.permalink||"#";
+      var art=document.createElement("article");art.className="card";
+      art.innerHTML='<span class="num">'+n+'</span><h3>'+esc(it.title)+'</h3>'+(it.sourceName?'<span class="chip">'+esc(it.sourceName)+'</span>':'')+'<p>'+esc(it.summary||"")+'</p><a class="more" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">阅读原文 →</a>';
+      grid.appendChild(art);});
+    sec.appendChild(grid);main.appendChild(sec);
+  });
+  document.getElementById("footertotal").textContent=P.total;
+  new ThemeManager();
+  var anchors=[].slice.call(toc.querySelectorAll("a"));
+  if("IntersectionObserver" in window){
+    var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)anchors.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id);});});},{rootMargin:"-30% 0px -60% 0px"});
+    P.sections.forEach(function(s,i){var el=document.getElementById("sec"+i);if(el)obs.observe(el);});
+  }
+})();</script></body></html>
