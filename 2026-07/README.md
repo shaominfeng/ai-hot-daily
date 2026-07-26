@@ -1,6 +1,6 @@
 # AI HOT 晨报 · 2026-07
 
-本月共 13 篇。
+本月共 14 篇。
 
 🌐 在线阅读（GitHub Pages）：https://shaominfeng.github.io/ai-hot-daily/2026-07/
 
@@ -18,5 +18,6 @@
 - [2026-07-23 周四](https://shaominfeng.github.io/ai-hot-daily/2026-07/ai-hot-daily-2026-07-23.html)
 - [2026-07-24 周五](https://shaominfeng.github.io/ai-hot-daily/2026-07/ai-hot-daily-2026-07-24.html)
 - [2026-07-25 周六](https://shaominfeng.github.io/ai-hot-daily/2026-07/ai-hot-daily-2026-07-25.html)
+- [2026-07-26 周日](https://shaominfeng.github.io/ai-hot-daily/2026-07/ai-hot-daily-2026-07-26.html)
 
 > 本地阅读：直接打开同目录 `ai-hot-daily-YYYY-MM-DD.html` 即可。
